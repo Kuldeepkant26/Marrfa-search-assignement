@@ -1,0 +1,16 @@
+.navbar {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0px;
+    
+    box-shadow: 20px 20px 60px #bebebe9d,
+        -20px -20px 60px #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 1rem;
+}
