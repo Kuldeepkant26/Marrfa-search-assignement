@@ -19,7 +19,18 @@ function Home() {
             )
         )
     }, [query, bookData])
+    function handelSearch() {
+        if (query === '') {
+            alert('Enter somthing')
+        }
+        setBooks(
+            bookData.filter((book) =>
+                book.title.toLowerCase().includes(query.toLowerCase()) || book.category.toLowerCase().includes(query.toLowerCase())
+            )
+        )
 
+        
+    }
     return (
         <>
             <p className='m-auto w-fit text-gray-500 mb-2 (for eg- fiction self help)'>Search books by name, author or category Eg- horror </p>
@@ -30,12 +41,13 @@ function Home() {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
-                <button>
-                    <i
-                        className="ri-close-large-fill clear"
-                        style={{ display: query.length ? 'block' : 'none' }}
-                        onClick={() => setQuery('')}
-                    ></i>
+                <i
+                    className="ri-close-large-fill clear"
+                    style={{ display: query.length ? 'block' : 'none' }}
+                    onClick={() => setQuery('')}
+                ></i>
+                <button onClick={() => { handelSearch() }}>
+
                     <i className="ri-search-line"></i>
                 </button>
             </div>

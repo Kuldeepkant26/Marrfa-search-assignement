@@ -6,6 +6,7 @@
   border-radius: 10px;
   background: #e0e0e0c6;
   box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  position: relative;
 }
 
 .search-bar input {
@@ -23,12 +24,12 @@
   background-color: black;
   color: white;
   padding: 0.7rem;
-  position: relative;
+
 }
 
-.search-bar button .clear {
+.search-bar .clear {
   position: absolute;
-  left: -30px;
+  right: 12%;
   color: black;
   font-size: 1.2rem;
   bottom: 9px;
@@ -46,7 +47,7 @@
 .filters button {
   background-color: salmon;
   border-radius: 5px;
- padding: 3px 10px;
+  padding: 3px 10px;
 }
 
 @media (max-width:600px) {
